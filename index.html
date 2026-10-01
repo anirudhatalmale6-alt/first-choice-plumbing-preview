@@ -1,0 +1,360 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>First Choice Plumbing &amp; Drain Care | Conyers, GA Plumber</title>
+<meta name="description" content="First Choice Plumbing & Drain Care, LLC in Conyers, GA. Over 30 years of plumbing experience: drain cleaning, leak repair, water heaters, sewer lines and more. Call 404-456-1882.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700;800;900&family=Public+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500;600&display=swap">
+<style>
+/* Layout: service-truck feel — a pipe line runs across the top, bold industrial wordmark, then services, experience, and a booking form with a contact rail */
+:root{
+  --bg:#f3f5f7; --surface:#ffffff; --ink:#0f1720; --muted:#4f5b68; --line:#d7dde4;
+  --accent:#1a5ea8; --accent-ink:#ffffff; --brass:#a87a1e; --soft:#e6eef7; --ok:#1f7a4d;
+  --display:"Big Shoulders Display","Arial Narrow",Impact,sans-serif;
+  --body:"Public Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --mono:"IBM Plex Mono",ui-monospace,Menlo,Consolas,monospace;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#0d1218; --surface:#151c24; --ink:#e9eef3; --muted:#9eabb8; --line:#2a3440;
+  --accent:#5aa2ec; --accent-ink:#06121f; --brass:#d6a849; --soft:#18293b; --ok:#4cc38a; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#0d1218; --surface:#151c24; --ink:#e9eef3; --muted:#9eabb8; --line:#2a3440;
+  --accent:#5aa2ec; --accent-ink:#06121f; --brass:#d6a849; --soft:#18293b; --ok:#4cc38a; color-scheme:dark}
+*{box-sizing:border-box}
+[hidden]{display:none!important}
+body{background:var(--bg);color:var(--ink);font-family:var(--body);font-size:16px;line-height:1.6}
+.wrap{max-width:1120px;margin:0 auto;padding-inline:20px}
+a{color:var(--accent)}
+:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
+h1,h2,h3{font-family:var(--display);line-height:1.02;text-wrap:balance;margin:0}
+.eyebrow{font:600 12px/1 var(--mono);letter-spacing:.14em;text-transform:uppercase;color:var(--brass)}
+
+/* top bar */
+.top{border-bottom:1px solid var(--line);background:var(--surface)}
+.top .wrap{display:flex;flex-wrap:wrap;gap:8px 20px;justify-content:space-between;align-items:center;padding-block:10px;font-size:14px;color:var(--muted)}
+.top strong{color:var(--ink);font-family:var(--mono)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;font:700 15px/1 var(--body);padding:14px 20px;border-radius:6px;border:2px solid var(--accent);background:var(--accent);color:var(--accent-ink);text-decoration:none;cursor:pointer}
+.btn.ghost{background:transparent;color:var(--accent)}
+.btn:hover{filter:brightness(1.08)}
+
+/* hero */
+.hero{padding-block:40px 56px}
+.pipe{width:100%;max-width:640px;height:auto;display:block;color:var(--ink)}
+.mark{display:flex;flex-wrap:wrap;align-items:baseline;gap:0 .18em;font-family:var(--display);font-weight:900;font-size:clamp(3.4rem,13vw,8rem);line-height:.9;margin-top:-6px;letter-spacing:-.01em}
+.mark .striped{color:transparent;background:repeating-linear-gradient(180deg,var(--ink) 0 .075em,transparent .075em .13em);-webkit-background-clip:text;background-clip:text;-webkit-text-stroke:1.5px var(--ink)}
+.sub{font-family:var(--display);font-weight:800;font-size:clamp(1.4rem,4vw,2rem);letter-spacing:.02em;margin-top:6px}
+.hero-grid{display:grid;grid-template-columns:1.3fr 1fr;gap:40px;align-items:end;margin-top:28px}
+.hero-grid > *{min-width:0}
+.lede{font-size:1.15rem;max-width:56ch;color:var(--muted);margin:0 0 22px}
+.lede b{color:var(--ink)}
+.actions{display:flex;flex-wrap:wrap;gap:12px}
+.years{border-left:4px solid var(--brass);padding:4px 0 4px 20px}
+.years .num{font-family:var(--display);font-weight:900;font-size:clamp(4.5rem,12vw,7rem);line-height:.85;color:var(--accent)}
+.years p{margin:6px 0 0;font-weight:600;max-width:24ch}
+
+/* sections */
+section{padding-block:56px;border-top:1px solid var(--line)}
+.head{display:flex;flex-direction:column;gap:10px;margin-bottom:28px}
+.head h2{font-size:clamp(2.2rem,6vw,3.2rem);font-weight:800}
+.services{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line)}
+.svc{background:var(--surface);padding:22px;min-width:0}
+.svc svg{width:28px;height:28px;color:var(--accent)}
+.svc h3{font-size:1.6rem;font-weight:800;margin:10px 0 6px}
+.svc p{margin:0;color:var(--muted);font-size:15px}
+
+.why{display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
+.why div{min-width:0}
+.why h3{font-size:1.35rem;font-weight:800;margin-bottom:4px}
+.why p{margin:0;color:var(--muted);font-size:15px}
+
+/* booking */
+.book{display:grid;grid-template-columns:1.6fr 1fr;gap:32px;align-items:start}
+.book > *{min-width:0}
+form{background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:24px;display:grid;gap:16px}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.row > *{min-width:0}
+label{display:grid;gap:6px;font-weight:600;font-size:14px}
+label span.opt{font-weight:400;color:var(--muted)}
+input,select,textarea{font:inherit;font-size:16px;color:var(--ink);background:var(--bg);border:1px solid var(--line);border-radius:6px;padding:11px 12px;width:100%}
+textarea{min-height:110px;resize:vertical}
+input:focus,select:focus,textarea:focus{border-color:var(--accent);outline:2px solid var(--soft)}
+fieldset{border:0;padding:0;margin:0;display:grid;gap:8px}
+legend{font-weight:600;font-size:14px;margin-bottom:6px}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chips label{display:flex;align-items:center;gap:8px;font-weight:500;border:1px solid var(--line);border-radius:999px;padding:8px 14px;cursor:pointer;background:var(--bg)}
+.chips input{width:auto;margin:0;accent-color:var(--accent)}
+.chips label:has(input:checked){border-color:var(--accent);background:var(--soft)}
+.err{color:#c0392b;font-size:14px;margin:0}
+.note{font-size:13px;color:var(--muted);margin:0}
+
+.rail{display:grid;gap:16px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:20px}
+.card h3{font-size:1.4rem;font-weight:800;margin-bottom:10px}
+.contact{display:grid;gap:12px}
+.contact div{display:grid;gap:2px}
+.contact small{font:600 11px/1 var(--mono);letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+.contact .val{font-family:var(--mono);font-weight:600;font-size:1.05rem;word-break:break-all;user-select:all}
+.emerg{background:var(--accent);color:var(--accent-ink);border-color:var(--accent)}
+.emerg p{margin:0 0 10px}
+.emerg .val{font-family:var(--mono);font-weight:600;font-size:1.5rem}
+
+/* confirmation */
+.done{background:var(--surface);border:2px solid var(--ok);border-radius:8px;padding:24px;display:grid;gap:14px}
+.done h3{font-size:1.8rem;font-weight:800;color:var(--ok)}
+.done pre{white-space:pre-wrap;word-break:break-word;font:14px/1.5 var(--mono);background:var(--bg);border:1px solid var(--line);border-radius:6px;padding:14px;margin:0;max-height:280px;overflow:auto}
+.done .actions .btn{flex:1 1 200px}
+
+footer{border-top:1px solid var(--line);padding-block:28px;color:var(--muted);font-size:14px}
+footer .wrap{display:flex;flex-wrap:wrap;gap:8px 24px;justify-content:space-between}
+
+@media (max-width:860px){
+  .hero-grid,.book{grid-template-columns:1fr}
+  .services{grid-template-columns:1fr 1fr}
+  .why{grid-template-columns:1fr 1fr}
+}
+@media (max-width:540px){
+  .services,.why,.row{grid-template-columns:1fr}
+  .wrap{padding-inline:16px}
+}
+@media (prefers-reduced-motion:no-preference){
+  .drip{animation:drip 2.8s ease-in infinite}
+  @keyframes drip{0%{transform:translateY(0);opacity:0}15%{opacity:1}70%{transform:translateY(22px);opacity:1}100%{transform:translateY(30px);opacity:0}}
+}
+body{margin:0}
+.hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
+button[disabled]{opacity:.6;cursor:wait}
+</style>
+</head>
+<body>
+
+<div class="top"><div class="wrap">
+  <span>Licensed plumbing &amp; drain care · Conyers, GA and surrounding areas</span>
+  <span>Call or text <strong>404-456-1882</strong></span>
+</div></div>
+
+<header class="hero"><div class="wrap">
+  <svg class="pipe" viewBox="0 0 640 110" fill="none" aria-hidden="true">
+    <path d="M24 108 V44 Q24 24 44 24 H560" stroke="currentColor" stroke-width="16" stroke-linecap="butt"/>
+    <rect x="10" y="78" width="28" height="10" rx="2" fill="currentColor"/>
+    <rect x="96" y="12" width="10" height="24" rx="2" fill="currentColor"/>
+    <rect x="556" y="12" width="22" height="24" rx="3" fill="currentColor"/>
+    <path d="M578 16 H600 Q624 16 624 44 V56 H608 V46 Q608 34 598 34 H578Z" fill="currentColor"/>
+    <rect x="584" y="2" width="8" height="12" fill="currentColor"/>
+    <rect x="568" y="0" width="40" height="6" rx="3" fill="currentColor"/>
+    <rect x="604" y="56" width="24" height="7" rx="2" fill="currentColor"/>
+    <path class="drip" d="M616 70 q-5 8 0 12 q5 -4 0 -12z" fill="var(--accent)"/>
+  </svg>
+  <h1 class="mark"><span>First</span><span class="striped">Choice</span></h1>
+  <div class="sub">Plumbing &amp; Drain Care, LLC</div>
+
+  <div class="hero-grid">
+    <div>
+      <p class="lede">Leaks, clogs, water heaters and repipes, handled right the first time. <b>Over 30 years</b> of hands-on plumbing experience serving homes and businesses in Conyers and the surrounding communities.</p>
+      <div class="actions">
+        <a class="btn" href="#book">Schedule an appointment</a>
+        <a class="btn ghost" href="tel:4044561882">Call 404-456-1882</a>
+      </div>
+    </div>
+    <div class="years">
+      <div class="num">30+</div>
+      <p>years of experience in residential and commercial plumbing</p>
+    </div>
+  </div>
+</div></header>
+
+<section id="services"><div class="wrap">
+  <div class="head"><span class="eyebrow">What we fix</span><h2>Plumbing services</h2></div>
+  <div class="services">
+    <div class="svc">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16M6 4v6a6 6 0 0 0 12 0V4M12 16v5"/></svg>
+      <h3>Drain cleaning</h3><p>Kitchen, bath, floor and main-line clogs cleared, with camera inspection when the problem keeps coming back.</p>
+    </div>
+    <div class="svc">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3c3 4 6 7.5 6 11a6 6 0 0 1-12 0c0-3.5 3-7 6-11z"/></svg>
+      <h3>Leak repair</h3><p>Dripping faucets, hidden slab and wall leaks, burst pipes and running toilets found and fixed.</p>
+    </div>
+    <div class="svc">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="6" y="3" width="12" height="18" rx="2"/><path d="M10 15c0-1.5 2-2 2-4 0 2 2 2.5 2 4a2 2 0 0 1-4 0z"/></svg>
+      <h3>Water heaters</h3><p>Tank and tankless repair, replacement and flushing for steady hot water.</p>
+    </div>
+    <div class="svc">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h7v-4h4v4h7M10 12v6M14 12v6"/></svg>
+      <h3>Sewer &amp; water lines</h3><p>Line repair and replacement, root intrusion and backups between your home and the street.</p>
+    </div>
+    <div class="svc">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 10h14v3a7 7 0 0 1-14 0zM12 10V5h4"/></svg>
+      <h3>Fixtures</h3><p>Toilets, sinks, faucets, tubs, showers and garbage disposals installed or repaired.</p>
+    </div>
+    <div class="svc">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 20h16M6 20V9l6-5 6 5v11M10 20v-6h4v6"/></svg>
+      <h3>Remodels &amp; repipes</h3><p>New plumbing for kitchen and bath remodels, additions, and full-home repiping.</p>
+    </div>
+  </div>
+</div></section>
+
+<section id="why"><div class="wrap">
+  <div class="head"><span class="eyebrow">Why First Choice</span><h2>Three decades on the job</h2></div>
+  <div class="why">
+    <div><h3>Experience</h3><p>More than 30 years of plumbing work means we've seen your problem before and know how to fix it.</p></div>
+    <div><h3>Straight talk</h3><p>We explain what's wrong and what it will cost before any work begins.</p></div>
+    <div><h3>Clean work</h3><p>We protect your floors, clean up after ourselves, and leave the job site the way we found it.</p></div>
+    <div><h3>Local</h3><p>Based in Conyers and serving Rockdale County and nearby communities.</p></div>
+  </div>
+</div></section>
+
+<section id="book"><div class="wrap">
+  <div class="head"><span class="eyebrow">Book a visit</span><h2>Schedule an appointment</h2></div>
+  <div class="book">
+    <div>
+      <form id="form" novalidate>
+        <div class="row">
+          <label for="name">Full name<input id="name" autocomplete="name" placeholder="Jane Smith" required></label>
+          <label for="phone">Phone<input id="phone" type="tel" autocomplete="tel" placeholder="(404) 555-0123" required></label>
+        </div>
+        <div class="row">
+          <label for="email">Email <span class="opt">(optional)</span><input id="email" type="email" autocomplete="email" placeholder="you@example.com"></label>
+          <label for="service">Service needed
+            <select id="service" required>
+              <option value="">Choose a service</option>
+              <option>Drain cleaning</option><option>Leak repair</option><option>Water heater</option>
+              <option>Sewer / water line</option><option>Fixture install or repair</option>
+              <option>Remodel / repipe</option><option>Estimate</option><option>Other</option>
+            </select>
+          </label>
+        </div>
+        <label for="address">Service address<input id="address" autocomplete="street-address" placeholder="Street, city, ZIP" required></label>
+        <div class="row">
+          <label for="date">Preferred date<input id="date" type="date" required></label>
+          <label for="window">Preferred time
+            <select id="window" required>
+              <option value="">Choose a time window</option>
+              <option>Morning (8 AM – 12 PM)</option><option>Afternoon (12 – 4 PM)</option>
+              <option>Late afternoon (4 – 6 PM)</option><option>First available</option>
+            </select>
+          </label>
+        </div>
+        <fieldset>
+          <legend>How urgent is it?</legend>
+          <div class="chips">
+            <label><input type="radio" name="urgency" id="u1" value="Routine" checked> Routine</label>
+            <label><input type="radio" name="urgency" id="u2" value="Soon (within 48 hours)"> Within 48 hours</label>
+            <label><input type="radio" name="urgency" id="u3" value="Urgent – active leak or no water"> Urgent</label>
+          </div>
+        </fieldset>
+        <label for="details">Describe the problem<textarea id="details" placeholder="Example: Kitchen sink drains slowly and gurgles. Started last week."></textarea></label>
+        <label class="hp" aria-hidden="true">Leave this empty<input id="gotcha" name="_gotcha" tabindex="-1" autocomplete="off"></label>
+        <p class="err" id="err" hidden></p>
+        <button class="btn" type="submit" id="submitBtn">Request appointment</button>
+        <p class="note">Your request goes straight to our email, and you can text a copy to 404-456-1882. We'll call to confirm your time.</p>
+      </form>
+
+      <div class="done" id="done" hidden>
+        <h3>Request sent. Thank you!</h3>
+        <p class="note" style="font-size:15px;color:var(--ink)">We received your request and will call you to confirm a time. For faster service, text us a copy as well.</p>
+        <pre id="summary"></pre>
+        <div class="actions">
+          <a class="btn" id="smsBtn" href="#">Text a copy to 404-456-1882</a>
+          <button class="btn ghost" id="again" type="button">Start a new request</button>
+        </div>
+      </div>
+    </div>
+
+    <aside class="rail">
+      <div class="card emerg">
+        <h3>Plumbing emergency?</h3>
+        <p>Active leak, sewage backup or no water? Call now.</p>
+        <div class="val">404-456-1882</div>
+      </div>
+      <div class="card contact">
+        <h3>Contact</h3>
+        <div><small>Phone / text</small><span class="val">404-456-1882</span></div>
+        <div><small>Email</small><span class="val">firstchoicepdc@yahoo.com</span></div>
+        <div><small>Mail</small><span>P.O. Box 414<br>Conyers, GA 30012</span></div>
+        <div><small>Web</small><span>yourfirstchoiceplumbing.com</span></div>
+      </div>
+    </aside>
+  </div>
+</div></section>
+
+<footer><div class="wrap">
+  <span>© <span id="yr"></span> First Choice Plumbing &amp; Drain Care, LLC · P.O. Box 414, Conyers, GA 30012</span>
+  <span>404-456-1882 · firstchoicepdc@yahoo.com</span>
+</div></footer>
+
+<script>
+/* ================= FORMSPREE =================
+   Submissions POST to https://formspree.io/f/<FORMSPREE_ID>.
+   The destination inbox is set inside the Formspree account, never here,
+   so the email address is not exposed in this page's source.
+   To reuse this form on another page: copy the <form> block plus this
+   script, and change FORMSPREE_ID only if you create a separate form.
+   ============================================== */
+const FORMSPREE_ID = "xjykdygd";
+
+(function(){
+  const EMAIL="firstchoicepdc@yahoo.com", PHONE="4044561882";
+  const $=id=>document.getElementById(id);
+  $("yr").textContent=new Date().getFullYear();
+  const d=new Date(); d.setMinutes(d.getMinutes()-d.getTimezoneOffset());
+  $("date").min=d.toISOString().slice(0,10);
+
+  function fmtDate(v){
+    if(!v) return "";
+    const [y,m,dd]=v.split("-").map(Number);
+    return new Date(y,m-1,dd).toLocaleDateString("en-US",{weekday:"long",month:"long",day:"numeric",year:"numeric"});
+  }
+  function showErr(msg){$("err").textContent=msg;$("err").hidden=false;}
+
+  $("form").addEventListener("submit",async function(e){
+    e.preventDefault();
+    if($("gotcha").value) return; // spam bot
+    const f={name:$("name").value.trim(),phone:$("phone").value.trim(),email:$("email").value.trim(),
+      service:$("service").value,address:$("address").value.trim(),date:$("date").value,
+      win:$("window").value,urg:(document.querySelector('input[name="urgency"]:checked')||{}).value||"Routine",
+      details:$("details").value.trim()};
+    const missing=[];
+    if(!f.name)missing.push("your name");
+    if(f.phone.replace(/\D/g,"").length<10)missing.push("a 10-digit phone number");
+    if(!f.service)missing.push("the service needed");
+    if(!f.address)missing.push("the service address");
+    if(!f.date)missing.push("a preferred date");
+    if(!f.win)missing.push("a preferred time");
+    if(f.email && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(f.email))missing.push("a valid email (or leave it blank)");
+    if(missing.length){showErr("Please add "+missing.join(", ")+".");return;}
+    $("err").hidden=true;
+
+    const body=["APPOINTMENT REQUEST – First Choice Plumbing","",
+      "Name: "+f.name,"Phone: "+f.phone,"Email: "+(f.email||"—"),"Address: "+f.address,
+      "Service: "+f.service,"Preferred date: "+fmtDate(f.date),"Preferred time: "+f.win,
+      "Urgency: "+f.urg,"","Problem:",f.details||"(not described)"].join("\n");
+    const subject="Appointment request: "+f.service+" – "+f.name;
+    const sms="First Choice appt request: "+f.name+", "+f.phone+". "+f.service+" at "+f.address+
+      ". "+fmtDate(f.date)+", "+f.win+". Urgency: "+f.urg+"."+(f.details?" "+f.details:"");
+
+    const btn=$("submitBtn"); btn.disabled=true; btn.textContent="Sending…";
+    try{
+      const data={_subject:subject,Name:f.name,Phone:f.phone,"Preferred date":fmtDate(f.date),
+        "Preferred time":f.win,Service:f.service,Address:f.address,Urgency:f.urg,Problem:f.details||"(not described)"};
+      if(f.email){data.email=f.email;}
+      const res=await fetch("https://formspree.io/f/"+FORMSPREE_ID,{method:"POST",
+        headers:{"Content-Type":"application/json","Accept":"application/json"},body:JSON.stringify(data)});
+      if(!res.ok) throw new Error("status "+res.status);
+      $("summary").textContent=body;
+      $("smsBtn").href="sms:"+PHONE+"?&body="+encodeURIComponent(sms);
+      $("form").hidden=true; $("done").hidden=false;
+      $("done").scrollIntoView({behavior:"smooth",block:"start"});
+    }catch(err){
+      showErr("We couldn't send your request online. Please call or text 404-456-1882, or email "+EMAIL+".");
+    }finally{
+      btn.disabled=false; btn.textContent="Request appointment";
+    }
+  });
+
+  $("again").addEventListener("click",function(){$("form").reset();$("done").hidden=true;$("form").hidden=false;$("form").scrollIntoView({block:"start"});});
+})();
+</script>
+</body>
+</html>
